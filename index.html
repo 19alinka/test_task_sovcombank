@@ -1,135 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="img/logo.svg">
     <title>Test task</title>
 </head>
-<body>   
+<body>
     <header class="header">
         <div class="container">
-            <section class="header__logo">
-                <img src="img/logo.svg" alt="Logo">
-            </section>
-            <nav class="header__nav">
-                <ul class="header__nav-items">
-                    <li class="header__nav-item">
-                        <a href="#">Главная</a>
+            <div class="header__logo">
+                <img class="header__img" src="img/logo.svg" alt="Логотип сайта h.M">
+            </div>
+            <input type="checkbox" id="burger-toggle">
+            <label for="burger-toggle" class="burger-icon" onclick="overlay()"></label>
+            <nav id="burger__menu" class="header__nav">
+                <ul class="header__items">
+                    <li class="header__item">
+                        <a class="header__link1" href="#">Главная</a>
                     </li>
-                    <li class="header__nav-item">
-                        <a href="#">Основное меню</a>
-                        <span class="first-arrow"></span>
-                        <ul class="second-level__items">
-                            <span class="second-arrow"></span>
-                            <li class="second-level__item">
-                                <a href="#">Заказать вёрстку</a>
+                    <li class="header__item">
+                        <input type="checkbox" id="arrow-toggle1">
+                        <label for="arrow-toggle1" class="arrow-icon1" onclick="lower1()"></label>
+                        <a class="header__link1" href="#">Основное меню</a>
+                        <ul class="second__items" id="second-level">
+                            <li class="second__item">
+                                <a class="header__link2" href="#">Заказать вёрстку</a>
                             </li>
-                            <li class="second-level__item">
-                                <a href="#">Отправить макет на проверку</a>
+                            <li class="second__item">
+                                <a class="header__link2" href="#">Отправить макет на проверку</a>
                             </li>
-                            <li class="second-level__item">
-                                <a href="#">Хочу работать у вас</a>
+                            <li class="second__item">
+                                <a class="header__link2" href="#">Хочу работать у вас</a>
                             </li>
-                            <li class="second-level__item">
-                                <a href="#">Есть предложение по работе с кл...</a>
-                                <span class="first-arrow arrow"></span>
-                                <ul class="third-level__items">
-                                    <span class="third-arrow"></span>
-                                    <li class="third-level__item">
-                                        <a href="#">У меня есть оффер</a>
+                            <li class="second__item">
+                                <input type="checkbox" id="arrow-toggle2">
+                                <label for="arrow-toggle2" class="arrow-icon2" onclick="lower2()"></label>
+                                <a class="header__link2 link4" href="#">Есть предложение по работе с клиентами</a>
+                                <ul class="third__items">
+                                    <li class="third__item">
+                                        <a class="header__link3 link3-1" href="#">У меня есть оффер</a>
                                     </li>
-                                    <li class="third-level__item">
-                                        <a href="#">Сделать партнёром</a>
+                                    <li class="third__item">
+                                        <a class="header__link3 link3-2" href="#">Сделать партнёром</a>
                                     </li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
-                    <li class="header__nav-item">
-                        <a href="#">Наши сервисы</a>
+                    <li class="header__item" id="lower">
+                        <a class="header__link1" href="#">Наши сервисы</a>
                     </li>
-                    <li class="header__nav-item">
-                        <a href="#">Контакты</a>
+                    <li class="header__item">
+                        <a class="header__link1" href="#">Контакты</a>
                     </li>
-                </ul>
+                </ul>   
             </nav>
-            <section class="header__contact">
-                <a href="tel:+13212223333">
-                    <img src="img/Frame.svg" alt="Contacts">
-                </a>
-                <p>+1 (321) 222 - 33 - 33</p>
-            </section>
+            <div class="header__contact">
+                <a class="header__link4" href="tel:+1(321)222-33-33">+1 (321) 222 - 33 - 33</a>
+            </div>
         </div>
     </header>
 
-    <header class="header-iPad">
-        <div class="container">           
-            <section class="header-iPad__logo">
-                <img  src="img/logo.svg" alt="Logo">
-            </section>
-            <section class="header-iPad__contact">
-                <a href="tel:+13212223333">
-                    <img src="img/Frame.svg" alt="Contacts">
-                </a>
-                <p>+1 (321) 222 - 33 - 33</p>
-            </section>
-            <section class="header-iPad__burger">
-                <input type="checkbox" id="burger-toggle">
-                <label for="burger-toggle" class="burger-icon"></label>
-                <div class="overlay"></div>
-                <nav class="iPad-nav">
-                    <ul class="iPad-nav__items">
-                        <li class="iPad-nav__item">
-                            <a href="#">Главная</a>
-                        </li>
-                        <li class="iPad-nav__item">
-                            <a href="#" class="link" onclick="myFunction()">Основное меню</a>
-                            <span id="second-level-arrow" class="iPad__arrow link" onclick="myFunction()"></span>
-                            <ul class="second-level__items" id="second-level">
-                                <li class="second-level__item">
-                                    <a href="#">Заказать вёрстку</a>
-                                </li>
-                                <li class="second-level__item">
-                                    <a href="#">Отправить макет на проверку</a>
-                                </li>
-                                <li class="second-level__item">
-                                    <a href="#">Хочу работать у вас</a>
-                                </li>
-                                <li class="second-level__item">
-                                    <div>
-                                        <a href="#" class="link2" onclick="myFunction2()">Есть предложение по работе с кл...</a>
-                                        <span id="third-level-arrow" class="iPad__arrow link2" onclick="myFunction2()"></span>
-                                    </div>
-                                    <ul class="third-level__items" id="third-level">
-                                        <li class="third-level__item">
-                                            <a href="#">У меня есть оффер</a>
-                                        </li>
-                                        <li class="third-level__item">
-                                            <a href="#">Сделать партнёром</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="iPad-nav__item">
-                            <a href="#">Наши сервисы</a>
-                        </li>
-                        <li class="iPad-nav__item">
-                            <a href="#">Контакты</a>
-                        </li>
-                    </ul>
-                </nav>
-            </section>
-        </div>
-    </header>
+    <main class="main">
+        <section class="main__alpaca"></section>
+    </main>
 
-    <section id="alpaca" class="alpaca">
-        <img src="img/alpaca.png" alt="alpaca">
-    </section>
-
-    <script src="js/script.js"></script> 
+    <script src="js/script.js"></script>
 </body>
 </html>
